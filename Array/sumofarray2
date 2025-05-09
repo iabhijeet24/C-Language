@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    int x[100], esum = 0, osum = 0, i, n;
+    int x[100], i, n, s, found = 0;
 
     printf("Enter the no. of values: ");
     scanf("%d", &n);
@@ -9,14 +9,22 @@ int main() {
     printf("Enter the values:\n");
     for(i = 0; i < n; i++) {
         scanf("%d", &x[i]);
-        if(x[i] % 2 == 0) {
-            esum = esum + x[i];
-        } else {
-            osum = osum + x[i];
+    }
+
+    printf("Enter the value you want to search: ");
+    scanf("%d", &s);
+    
+    for(i = 0; i < n; i++) {
+        if(s == x[i]) {
+            printf("Present\n");
+            found = 1;
+            break;
         }
     }
 
-    printf("The sum of odd numbers is %d and sum of even numbers is %d\n", osum, esum);
+    if(!found) {
+        printf("Not present\n");
+    }
 
     return 0;
 }

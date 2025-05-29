@@ -1,29 +1,33 @@
 #include <stdio.h>
 
 int main() {
-    int x[100], i, n, s, found = 0;
-
-    printf("Enter the no. of values: ");
-    scanf("%d", &n);
-
-    printf("Enter the values:\n");
-    for(i = 0; i < n; i++) {
+    int x [50], s, i, n, flag=0;
+    printf("Enter the no. of values:");
+    scanf("%d",&n);
+    printf("Enter the values:");
+    
+    for(i=0; i<n; i++)
+    {
         scanf("%d", &x[i]);
     }
-
-    printf("Enter the value you want to search: ");
+    printf("Enter the value you want to search:");
     scanf("%d", &s);
     
-    for(i = 0; i < n; i++) {
-        if(s == x[i]) {
-            printf("Present\n");
-            found = 1;
+    for(i=0; i<n; i++)
+    {
+        if(x[i] == s)
+        {
+            flag=1;
             break;
         }
     }
-
-    if(!found) {
-        printf("Not present\n");
+    
+    if(flag==1)
+    {
+        printf("Present");
+    }
+    else{
+        printf(" Not Present");
     }
 
     return 0;

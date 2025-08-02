@@ -9,12 +9,13 @@ int main() {
     
     printf("Enter the character you want to count:");
     scanf("%c", &ch);
+    void push (int value)
     
-    for(i=0; i<=st.strlen(); i++)
-    {
-        if(st[i]==ch){
-            count++;
-        }
+
+    int value, choice;
+    while(1){
+        printf("\n \n ***MENU***\n");
+    }
     }
     printf("The character has occured %d times", count);
 
